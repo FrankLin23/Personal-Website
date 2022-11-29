@@ -1,9 +1,13 @@
 <template>
-  <a title="Toggle Color Scheme" @click="toggleDark">
-    <i icon-carbon-sun />
+  <a @click="toggleDark()" cursor-pointer>
+    <div i-carbon-sun v-show="!isDark" />
+    <div i-carbon-moon v-show="isDark" />
   </a>
 </template>
 
 <script setup lang="ts">
-  function toggleDark() {}
+  import { isDark } from '~/utils';
+  import { useToggle } from '@vueuse/core';
+
+  const toggleDark = useToggle(isDark);
 </script>

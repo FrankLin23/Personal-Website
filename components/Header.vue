@@ -9,11 +9,11 @@
         <nuxt-link title="Blog" to="/blogs" decoration-none>
           <span lt-md:hidden>Blog</span>
         </nuxt-link>
-        <nuxt-link title="Blog" to="/blogs" decoration-none>
+        <nuxt-link title="Projects" to="/projects" decoration-none>
           <span lt-md:hidden>Projects</span>
         </nuxt-link>
-        <nuxt-link title="Blog" to="/blogs" decoration-none>
-          <span lt-md:hidden>About</span>
+        <nuxt-link title="Resume" to="/resume" decoration-none>
+          <span lt-md:hidden>Resume</span>
         </nuxt-link>
         <a
           i-carbon-logo-github
@@ -37,7 +37,6 @@
   .header {
     margin-bottom: 0;
   }
-
   .nav {
     padding: 2rem;
     width: 100%;
@@ -52,5 +51,23 @@
     display: grid;
     grid-gap: 1.2rem;
     grid-auto-flow: column;
+  }
+
+  .nav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    opacity: 0.6;
+    outline: none;
+  }
+
+  .nav a:hover {
+    opacity: 1;
+    text-decoration-color: inherit;
+  }
+
+  .nav .right > * {
+    margin: auto;
   }
 </style>
